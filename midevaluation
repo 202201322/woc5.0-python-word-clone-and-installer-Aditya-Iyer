@@ -7,3 +7,29 @@ text2.pack()
 text3=Label(root,text='THIS IS BOLD',font="Helvetica 15 underline")
 text3.pack()
 root.mainloop()
+
+
+
+from tkinter import *
+root=Tk()
+e=Entry(root,width=30)
+e.pack()
+def myclear():
+    e.delete(0,END)
+clear=Button(root,text='clear',padx=40,pady=20,command=myclear)
+clear.pack()
+root.mainloop()
+
+
+
+from tkinter import *
+root=Tk()
+e=Entry(root,width=30)
+e.pack()
+def myclear():
+    text=e.get()
+    paste=Label(root,text=str(text))
+    paste.pack()
+display=Button(root,text='display',padx=40,pady=20,command=myclear)
+display.pack()
+root.mainloop()
